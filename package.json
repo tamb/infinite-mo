@@ -28,7 +28,7 @@
   "devDependencies": {
     "husky": "^1.1.2",
     "lint-staged": "^7.3.0",
-    "prettier": "1.14.3"
+    "prettier": "^1.14.3"
   },
   "husky": {
     "hooks": {
@@ -41,7 +41,7 @@
     ],
     "*.{js,json,css,md}": [
       "prettier --write",
-      "git commit"
+      "git add"
     ]
   }
 }
