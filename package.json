@@ -5,6 +5,8 @@
   "dependencies": {
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "2.0.4",
     "styled-components": "^3.4.10",
     "substate": "^5.0.0",
@@ -28,6 +30,8 @@
   "devDependencies": {
     "husky": "^1.1.2",
     "lint-staged": "^7.3.0",
+    "preact": "^8.3.1",
+    "preact-compat": "^3.18.4",
     "prettier": "^1.14.3"
   },
   "husky": {
