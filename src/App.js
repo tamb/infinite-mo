@@ -1,11 +1,15 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { BrowserRouter as Router, Link, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Universe from "./components/presentational/Universe";
 import Stars from "./components/presentational/Stars";
 import Cloud from "./components/presentational/Cloud";
-import InfinityLogo from "./components/presentational/InfinityLogo";
+import Counter from "./components/container/Counter";
+import NavBar from "./components/container/NavBar";
+import Home from "./views/Home";
+import Ask from "./views/Ask";
+import About from "./views/About";
 
 const AppStyles = styled.div`
     @keyframes fadein{
@@ -19,6 +23,11 @@ const AppStyles = styled.div`
   
   color: #ffffff;
   text-align: center;
+
+
+  .container{
+    display: flex;
+  }
 
   header{
     z-index: 100;
@@ -67,16 +76,16 @@ class App extends Component {
           <Cloud />
         </Universe>
         <Router>
-          <div>
-            <header>
-              <InfinityLogo />
-              <h1>Infinite Mo</h1>
-              <h2>there's only one</h2>
-              <audio autoPlay loop>
-                <source src="echo.mp3" type="audio/mpeg" />
-                Your browser does not support the audio tag.
-              </audio>
-            </header>
+          <div className="container">
+            <div>
+              <NavBar />
+              <Switch>
+                <Route exact path="/" component={Home} />
+                <Route path="/about" component={About} />
+                <Route path="/ask" component={Ask} />
+              </Switch>
+            </div>
+            <Counter />
           </div>
         </Router>
       </AppStyles>
@@ -85,7 +94,3 @@ class App extends Component {
 }
 
 export default App;
-
-// <Route exact path="/" component={Home} />
-// <Route path="/about" component={About} />
-// <Route path="/topics" component={Topics} />
