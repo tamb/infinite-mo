@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const propTypes = {};
 
-const AboutWrapper = styled.div`
+const GalleryWrapper = styled.div`
   position: relative;
   z-index: 1001;
   margin-top: 1rem;
@@ -12,15 +12,19 @@ const AboutWrapper = styled.div`
   font-size: 1.4rem;
 `;
 
-class About extends Component {
+class Gallery extends Component {
   componentDidMount() {
-    document.title = "About - Infinite Mo";
+    document.title = "Gallery - Infinite Mo";
   }
   render() {
-    return <AboutWrapper>About things</AboutWrapper>;
+    return (
+      <GalleryWrapper>
+        <img src="img/mo.jpg" />
+      </GalleryWrapper>
+    );
   }
 }
 
-About.propTypes = propTypes;
+Gallery.propTypes = propTypes;
 
-export default About;
+export default Gallery;

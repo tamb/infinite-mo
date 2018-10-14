@@ -6,6 +6,9 @@ import InfinityLogo from "../../components/presentational/InfinityLogo";
 const propTypes = {};
 
 class Home extends Component {
+  componentDidMount() {
+    document.title = "Infinite Mo";
+  }
   render() {
     return (
       <header>
