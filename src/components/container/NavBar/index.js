@@ -11,7 +11,7 @@ const StyledNav = styled.nav`
   left: 0;
   width: 100%;
   height: auto;
-  font-size: 0.3rem;
+  font-size: 1.6rem;
   display: flex;
   z-index: 1001;
 
@@ -34,6 +34,7 @@ class NavBar extends Component {
       <StyledNav>
         <Link to="/">Home</Link>
         <Link to="/ask">AskMo</Link>
+        <Link to="/gallery">Gallery</Link>
         <Link to="/about">About</Link>
       </StyledNav>
     );

@@ -10,6 +10,7 @@ import NavBar from "./components/container/NavBar";
 import Home from "./views/Home";
 import Ask from "./views/Ask";
 import About from "./views/About";
+import Gallery from "./views/Gallery";
 
 const AppStyles = styled.div`
     @keyframes fadein{
@@ -53,13 +54,13 @@ const AppStyles = styled.div`
     }
     }
     h1{
-      font-size: .6rem;
+      font-size: 3rem;
       animation: fadein 2s ease-in;
       animation-fill-mode: forwards;
 
     }
     h2{
-      font-size: .3rem;
+      font-size: 2rem;
       animation: fadein 2s ease-in 3s;
       animation-fill-mode: forwards;
 
@@ -83,6 +84,7 @@ class App extends Component {
                 <Route exact path="/" component={Home} />
                 <Route path="/about" component={About} />
                 <Route path="/ask" component={Ask} />
+                <Route path="/gallery" component={Gallery} />
               </Switch>
             </div>
             <Counter />

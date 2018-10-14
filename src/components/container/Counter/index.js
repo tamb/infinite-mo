@@ -11,7 +11,7 @@ const CounterWrapper = styled.div`
   width: 100%;
   height: auto;
   text-align: center;
-  font-size: 0.3rem;
+  font-size: 1.4rem;
 `;
 
 class Counter extends Component {

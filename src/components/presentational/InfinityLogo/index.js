@@ -6,9 +6,9 @@ const LogoWrapper = styled.div`
   opacity: 0;
 
   svg {
-    height: 25px;
-    width: 50px;
-    margin-bottom: -8px;
+    height: 80px;
+    width: 300px;
+    /* margin-bottom: -8px; */
   }
 `;
 
