@@ -1,15 +1,24 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
+
+const LogoWrapper = styled.div`
+  opacity: 0;
+
+  svg {
+    height: 25px;
+    width: 50px;
+    margin-bottom: -8px;
+  }
+`;
 
 const propTypes = {};
 
 const InfinityLogo = () => {
   return (
-    <div>
+    <LogoWrapper className="fadein-logo">
       <svg
         class="logo-header-canvas"
-        width="100px"
-        height="100px"
         style="background:transparent;position:relative;"
         viewBox="0 0 100 100"
       >
@@ -20,7 +29,7 @@ const InfinityLogo = () => {
           />
         </g>
       </svg>
-    </div>
+    </LogoWrapper>
   );
 };
 

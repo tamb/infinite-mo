@@ -14,12 +14,7 @@ const StyledUniverse = styled.div`
 `;
 
 const Universe = props => {
-  return (
-    <StyledUniverse>
-      Universe
-      {props.children}
-    </StyledUniverse>
-  );
+  return <StyledUniverse>{props.children}</StyledUniverse>;
 };
 
 Universe.propTypes = propTypes;
