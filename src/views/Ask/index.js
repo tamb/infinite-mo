@@ -5,14 +5,33 @@ import styled from "styled-components";
 const propTypes = {};
 
 const AskWrapper = styled.div`
-  position: relative;
+  position: fixed;
   z-index: 1001;
   margin-top: 1rem;
   display: flex;
+  flex-direction: column;
   font-size: 1.4rem;
+  top: 1rem;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 
-  fieldset {
-    border: 0;
+  .ask {
+    opacity: 0;
+  }
+  .ask__title {
+    animation: fadein 2s ease-in;
+    animation-fill-mode: forwards;
+  }
+  .ask__tagline {
+    animation: fadein 2s ease-in 1.5s;
+    animation-fill-mode: forwards;
+  }
+  .ask__form {
+    animation: fadein 2s ease-in 1s;
+    animation-fill-mode: forwards;
   }
 `;
 
@@ -40,14 +59,16 @@ class Ask extends Component {
   render() {
     return (
       <AskWrapper>
-        <form onSubmit={() => this.generateNewQuestion()}>
-          <fieldset>
-            <legend>Ask Mo and he shall answer</legend>
-            <legend>
-              Your Question:
-              <textarea />
-            </legend>
-          </fieldset>
+        <h2 className="ask ask__title">Ask Mo a Question</h2>
+        <p className="ask ask__tagline">He shall answer in kind</p>
+        <form
+          className="ask ask__form"
+          onSubmit={() => this.generateNewQuestion()}
+        >
+          <label>
+            Your query:
+            <textarea />
+          </label>
           <button>Submit</button>
         </form>
       </AskWrapper>
