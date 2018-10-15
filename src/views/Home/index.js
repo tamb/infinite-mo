@@ -15,10 +15,6 @@ class Home extends Component {
         <InfinityLogo />
         <h1>Infinite Mo</h1>
         <h2>there's only one</h2>
-        <audio autoPlay loop>
-          <source src="echo.mp3" type="audio/mpeg" />
-          Your browser does not support the audio tag.
-        </audio>
       </header>
     );
   }
