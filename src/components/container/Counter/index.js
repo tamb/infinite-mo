@@ -6,7 +6,7 @@ const propTypes = {};
 
 const CounterWrapper = styled.div`
   position: fixed;
-  bottom: 0;
+  bottom: 1rem;
   left: 0;
   width: 100%;
   height: auto;

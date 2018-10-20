@@ -14,6 +14,7 @@ const StyledNav = styled.nav`
   font-size: 1.6rem;
   display: flex;
   z-index: 1001;
+  padding: 1rem 0;
 
   a {
     flex: 1;

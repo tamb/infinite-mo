@@ -28,6 +28,7 @@ const AppStyles = styled.div`
 
   .container{
     display: flex;
+    position: relative;
   }
 
   header{
@@ -68,6 +69,14 @@ const AppStyles = styled.div`
   }
 `;
 
+const PageContainer = styled.main`
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 2rem;
+  left: 0;
+`;
+
 class App extends Component {
   render() {
     return (
@@ -78,15 +87,15 @@ class App extends Component {
         </Universe>
         <Router>
           <div className="container">
-            <div>
-              <NavBar />
+            <NavBar />
+            <PageContainer>
               <Switch>
                 <Route exact path="/" component={Home} />
                 <Route path="/about" component={About} />
                 <Route path="/ask" component={Ask} />
                 <Route path="/gallery" component={Gallery} />
               </Switch>
-            </div>
+            </PageContainer>
             <Counter />
           </div>
         </Router>
