@@ -14,7 +14,9 @@ const StyledCloud = styled.div`
     }
   }
   .cloud {
-    background: transparent url("img/clouds.png") no-repeat;
+  background: transparent url("${
+    process.env.PUBLIC_URL
+  }/img/clouds.png") no-repeat;
     z-index: 3;
     position: absolute;
     background-size: contain;

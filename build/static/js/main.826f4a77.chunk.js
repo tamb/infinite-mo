@@ -9,18 +9,18 @@
       "use strict";
       t.r(e);
       var a = t(0),
-        r = (t(24), t(5)),
-        i = t(6),
+        i = (t(24), t(5)),
+        r = t(6),
         o = t(8),
         c = t(7),
         l = t(9),
-        s = t(2),
-        u = t(3),
+        u = t(2),
+        s = t(3),
         d = t(33),
         f = t(35),
         m = t(34);
       function p() {
-        var n = Object(s.a)([
+        var n = Object(u.a)([
           "\n  background-color: #000000;\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n"
         ]);
         return (
@@ -30,13 +30,15 @@
           n
         );
       }
-      var h = u.a.div(p()),
+      var h = s.a.div(p()),
         b = function(n) {
           return a.d.createElement(h, null, n.children);
         };
       function v() {
-        var n = Object(s.a)([
-          '\n  @keyframes move-background {\n    from {\n      transform: scale(1) rotate(0);\n    }\n    to {\n      transform: scale(1.33) rotate(360deg);\n    }\n  }\n  @keyframes fadeinout {\n    0% {\n      opacity: 0;\n    }\n    10% {\n      opacity: 1;\n    }\n    100% {\n      opacity: 0;\n    }\n  }\n  * {\n    position: fixed;\n    top: 0;\n    left: 0;\n    height: 100%;\n    width: 100%;\n    background-position: center;\n  }\n  .moving {\n    background: transparent url("img/stars.png");\n    background-repeat: no-repeat;\n    background-size: cover;\n    animation: move-background 400s linear infinite,\n      fadeinout 35s linear infinite;\n    transform-origin: 50% 50%;\n    opacity: 0;\n  }\n  .static-stars {\n    background: transparent url("img/stars.png");\n    background-repeat: no-repeat;\n    background-size: cover;\n    transform: scaleX(-1);\n  }\n'
+        var n = Object(u.a)([
+          '\n  @keyframes move-background {\n    from {\n      transform: scale(1) rotate(0);\n    }\n    to {\n      transform: scale(1.33) rotate(360deg);\n    }\n  }\n  @keyframes fadeinout {\n    0% {\n      opacity: 0;\n    }\n    10% {\n      opacity: 1;\n    }\n    100% {\n      opacity: 0;\n    }\n  }\n  * {\n    position: fixed;\n    top: 0;\n    left: 0;\n    height: 100%;\n    width: 100%;\n    background-position: center;\n  }\n  .moving {\n  background: transparent url("',
+          '/img/stars.png");\n    background-repeat: no-repeat;\n    background-size: cover;\n    animation: move-background 400s linear infinite,\n      fadeinout 35s linear infinite;\n    transform-origin: 50% 50%;\n    opacity: 0;\n  }\n  .static-stars {\n    background: transparent url("',
+          '/img/stars.png");\n    background-repeat: no-repeat;\n    background-size: cover;\n    transform: scaleX(-1);\n  }\n'
         ]);
         return (
           (v = function() {
@@ -45,7 +47,7 @@
           n
         );
       }
-      var g = u.a.div(v()),
+      var g = s.a.div(v(), "/build", "/build"),
         y = function() {
           return a.d.createElement(
             g,
@@ -55,8 +57,9 @@
           );
         };
       function k() {
-        var n = Object(s.a)([
-          '\n  @keyframes scroll-right {\n    from {\n      transform: translateX(-100%);\n    }\n    to {\n      transform: translateX(200%);\n    }\n  }\n  .cloud {\n    background: transparent url("img/clouds.png") no-repeat;\n    z-index: 3;\n    position: absolute;\n    background-size: contain;\n    top: 20%;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    width: 100%;\n    height: 100%;\n    display: block;\n    animation: scroll-right 1000s linear infinite;\n  }\n'
+        var n = Object(u.a)([
+          '\n  @keyframes scroll-right {\n    from {\n      transform: translateX(-100%);\n    }\n    to {\n      transform: translateX(200%);\n    }\n  }\n  .cloud {\n  background: transparent url("',
+          '/img/clouds.png") no-repeat;\n    z-index: 3;\n    position: absolute;\n    background-size: contain;\n    top: 20%;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    width: 100%;\n    height: 100%;\n    display: block;\n    animation: scroll-right 1000s linear infinite;\n  }\n'
         ]);
         return (
           (k = function() {
@@ -65,7 +68,7 @@
           n
         );
       }
-      var E = u.a.div(k()),
+      var E = s.a.div(k(), "/build"),
         j = function() {
           return a.d.createElement(
             E,
@@ -74,7 +77,7 @@
           );
         };
       function O() {
-        var n = Object(s.a)([
+        var n = Object(u.a)([
           "\n  position: fixed;\n  bottom: 0;\n  left: 0;\n  width: 100%;\n  height: auto;\n  text-align: center;\n  font-size: 1.4rem;\n"
         ]);
         return (
@@ -84,12 +87,12 @@
           n
         );
       }
-      var w = u.a.div(O()),
+      var w = s.a.div(O()),
         x = (function(n) {
           function e(n) {
             var t;
             return (
-              Object(r.a)(this, e),
+              Object(i.a)(this, e),
               ((t = Object(o.a)(this, Object(c.a)(e).call(this, n))).state = {
                 count: parseInt(
                   localStorage.getItem("mo-counter") ||
@@ -102,7 +105,7 @@
           }
           return (
             Object(l.a)(e, n),
-            Object(i.a)(e, [
+            Object(r.a)(e, [
               {
                 key: "getRandomInt",
                 value: function(n, e) {
@@ -138,7 +141,7 @@
         })(a.a),
         _ = t(32);
       function z() {
-        var n = Object(s.a)([
+        var n = Object(u.a)([
           "\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: auto;\n  font-size: 1.6rem;\n  display: flex;\n  z-index: 1001;\n\n  a {\n    flex: 1;\n    color: #ffffff;\n    text-decoration: underline;\n  }\n\n  a:hover,\n  a:active {\n    text-decoration: none;\n    color: #ffffff;\n  }\n"
         ]);
         return (
@@ -148,17 +151,17 @@
           n
         );
       }
-      var M = u.a.nav(z()),
+      var M = s.a.nav(z()),
         I = (function(n) {
           function e() {
             return (
-              Object(r.a)(this, e),
+              Object(i.a)(this, e),
               Object(o.a)(this, Object(c.a)(e).apply(this, arguments))
             );
           }
           return (
             Object(l.a)(e, n),
-            Object(i.a)(e, [
+            Object(r.a)(e, [
               {
                 key: "render",
                 value: function() {
@@ -173,7 +176,7 @@
                       "audio",
                       { autoPlay: !0, loop: !0 },
                       a.d.createElement("source", {
-                        src: "echo.mp3",
+                        src: "".concat("/build", "/echo.mp3"),
                         type: "audio/mpeg"
                       }),
                       "Your browser does not support the audio tag."
@@ -186,7 +189,7 @@
           );
         })(a.a);
       function N() {
-        var n = Object(s.a)([
+        var n = Object(u.a)([
           "\n  opacity: 0;\n\n  svg {\n    height: 80px;\n    width: 300px;\n    /* margin-bottom: -8px; */\n  }\n"
         ]);
         return (
@@ -196,7 +199,7 @@
           n
         );
       }
-      var A = u.a.div(N()),
+      var A = s.a.div(N()),
         S = function() {
           return a.d.createElement(
             A,
@@ -225,13 +228,13 @@
         D = (function(n) {
           function e() {
             return (
-              Object(r.a)(this, e),
+              Object(i.a)(this, e),
               Object(o.a)(this, Object(c.a)(e).apply(this, arguments))
             );
           }
           return (
             Object(l.a)(e, n),
-            Object(i.a)(e, [
+            Object(r.a)(e, [
               {
                 key: "componentDidMount",
                 value: function() {
@@ -255,7 +258,7 @@
           );
         })(a.a);
       function B() {
-        var n = Object(s.a)([
+        var n = Object(u.a)([
           "\n  position: fixed;\n  z-index: 1001;\n  margin-top: 1rem;\n  display: flex;\n  flex-direction: column;\n  font-size: 1.4rem;\n  top: 1rem;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  justify-content: center;\n  align-items: center;\n\n  .ask {\n    opacity: 0;\n  }\n  .ask__title {\n    animation: fadein 2s ease-in;\n    animation-fill-mode: forwards;\n  }\n  .ask__tagline {\n    animation: fadein 2s ease-in 1.5s;\n    animation-fill-mode: forwards;\n  }\n  .ask__form {\n    animation: fadein 2s ease-in 1s;\n    animation-fill-mode: forwards;\n  }\n"
         ]);
         return (
@@ -265,12 +268,12 @@
           n
         );
       }
-      var C = u.a.div(B()),
+      var C = s.a.div(B()),
         H = (function(n) {
           function e(n) {
             var t;
             return (
-              Object(r.a)(this, e),
+              Object(i.a)(this, e),
               ((t = Object(o.a)(this, Object(c.a)(e).call(this, n))).state = {
                 index: 0
               }),
@@ -279,7 +282,7 @@
           }
           return (
             Object(l.a)(e, n),
-            Object(i.a)(e, [
+            Object(r.a)(e, [
               {
                 key: "componentDidMount",
                 value: function() {
@@ -338,7 +341,7 @@
           );
         })(a.a);
       function L() {
-        var n = Object(s.a)([
+        var n = Object(u.a)([
           "\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  z-index: 1001;\n  margin-top: 1rem;\n  display: flex;\n  font-size: 1.4rem;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n\n  .article__title {\n    animation: fadein 2s ease-in;\n    animation-fill-mode: forwards;\n    opacity: 0;\n  }\n\n  .article__body {\n    animation: fadein 2s ease-in 1s;\n    animation-fill-mode: forwards;\n    opacity: 0;\n  }\n"
         ]);
         return (
@@ -348,17 +351,17 @@
           n
         );
       }
-      var Q = u.a.div(L()),
+      var Q = s.a.div(L()),
         X = (function(n) {
           function e() {
             return (
-              Object(r.a)(this, e),
+              Object(i.a)(this, e),
               Object(o.a)(this, Object(c.a)(e).apply(this, arguments))
             );
           }
           return (
             Object(l.a)(e, n),
-            Object(i.a)(e, [
+            Object(r.a)(e, [
               {
                 key: "componentDidMount",
                 value: function() {
@@ -398,7 +401,7 @@
           );
         })(a.a);
       function q() {
-        var n = Object(s.a)([
+        var n = Object(u.a)([
           "\n  position: relative;\n  z-index: 1001;\n  margin-top: 1rem;\n  display: flex;\n  font-size: 1.4rem;\n"
         ]);
         return (
@@ -408,17 +411,17 @@
           n
         );
       }
-      var G = u.a.div(q()),
+      var G = s.a.div(q()),
         J = (function(n) {
           function e() {
             return (
-              Object(r.a)(this, e),
+              Object(i.a)(this, e),
               Object(o.a)(this, Object(c.a)(e).apply(this, arguments))
             );
           }
           return (
             Object(l.a)(e, n),
-            Object(i.a)(e, [
+            Object(r.a)(e, [
               {
                 key: "componentDidMount",
                 value: function() {
@@ -440,7 +443,7 @@
           );
         })(a.a);
       function R() {
-        var n = Object(s.a)([
+        var n = Object(u.a)([
           "\n    @keyframes fadein{\n    from {\n      opacity: 0;\n    }\n    to{\n      opacity: 1;\n    }\n  }\n  \n  color: #ffffff;\n  text-align: center;\n\n\n  .container{\n    display: flex;\n  }\n\n  header{\n    z-index: 100;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    position: fixed;\n    top: 0;\n    left: 0;\n    height: 100%;\n    width: 100%;\n    h1,h2{\n      color: #ffffff;\n      position: relative;\n      margin: 0;\n      opacity: 0;\n      font-family: 'Aldrich', sans-serif;\n    }\n    .fadein-logo{\n      animation: fadein 2s ease-in 1.5s;\n      animation-fill-mode: forwards; \n    }\n    }\n    h1{\n      font-size: 3rem;\n      animation: fadein 2s ease-in;\n      animation-fill-mode: forwards;\n\n    }\n    h2{\n      font-size: 2rem;\n      animation: fadein 2s ease-in 3s;\n      animation-fill-mode: forwards;\n\n    }\n  }\n"
         ]);
         return (
@@ -450,17 +453,17 @@
           n
         );
       }
-      var W = u.a.div(R()),
+      var W = s.a.div(R()),
         Y = (function(n) {
           function e() {
             return (
-              Object(r.a)(this, e),
+              Object(i.a)(this, e),
               Object(o.a)(this, Object(c.a)(e).apply(this, arguments))
             );
           }
           return (
             Object(l.a)(e, n),
-            Object(i.a)(e, [
+            Object(r.a)(e, [
               {
                 key: "render",
                 value: function() {
@@ -531,4 +534,4 @@
   },
   [[21, 2, 1]]
 ]);
-//# sourceMappingURL=main.01484edd.chunk.js.map
+//# sourceMappingURL=main.826f4a77.chunk.js.map

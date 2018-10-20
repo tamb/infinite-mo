@@ -33,7 +33,7 @@ const StarStyles = styled.div`
     background-position: center;
   }
   .moving {
-    background: transparent url("img/stars.png");
+  background: transparent url("${process.env.PUBLIC_URL}/img/stars.png");
     background-repeat: no-repeat;
     background-size: cover;
     animation: move-background 400s linear infinite,
@@ -42,7 +42,7 @@ const StarStyles = styled.div`
     opacity: 0;
   }
   .static-stars {
-    background: transparent url("img/stars.png");
+    background: transparent url("${process.env.PUBLIC_URL}/img/stars.png");
     background-repeat: no-repeat;
     background-size: cover;
     transform: scaleX(-1);

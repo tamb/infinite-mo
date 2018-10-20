@@ -37,7 +37,10 @@ class NavBar extends Component {
         <Link to="/gallery">Gallery</Link>
         <Link to="/about">About</Link>
         <audio autoPlay loop>
-          <source src="echo.mp3" type="audio/mpeg" />
+          <source
+            src={`${process.env.PUBLIC_URL}/echo.mp3`}
+            type="audio/mpeg"
+          />
           Your browser does not support the audio tag.
         </audio>
       </StyledNav>

@@ -1226,7 +1226,8 @@
           },
           $ =
             ("undefined" !== typeof e &&
-              Object({ NODE_ENV: "production", PUBLIC_URL: "" }).SC_ATTR) ||
+              Object({ NODE_ENV: "production", PUBLIC_URL: "/build" })
+                .SC_ATTR) ||
             "data-styled-components",
           W = "__styled-components-stylesheet__",
           B = "undefined" !== typeof window && "HTMLElement" in window,
@@ -5226,4 +5227,4 @@
     }
   ]
 ]);
-//# sourceMappingURL=1.294fbb9a.chunk.js.map
+//# sourceMappingURL=1.ff5437e9.chunk.js.map
