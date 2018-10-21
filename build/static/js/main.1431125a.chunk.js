@@ -413,7 +413,7 @@
       }
       function q() {
         var n = Object(s.a)([
-          "\n  @keyframes zoom {\n    from {\n      transform: scale(1) translateX(0);\n    }\n    to {\n      transform: perspective(200px) scale(40) translateX(62.5px) translateY(5.25px);\n    }\n  }\n\n  @media screen and (min-width: 768px) {\n    @keyframes zoom {\n      from {\n        transform: scale(1) translateX(0);\n      }\n      to {\n        transform: scale(40) translateX(120.5px) translateY(10px);\n      }\n    }\n  }\n\n  position: relative;\n  z-index: 1001;\n  margin-top: 6rem;\n  display: flex;\n  font-size: 1.4rem;\n  opacity: 0;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  width: 100%;\n  height: auto;\n  animation: fadein 1s ease-in;\n  animation-fill-mode: forwards;\n\n  button {\n    padding: 2rem;\n    border: 0.3rem solid transparent;\n    border-radius: 5px;\n    font-size: 2rem;\n  }\n  button:hover,\n  button:focus,\n  button:active {\n    border: 0.3rem solid red;\n  }\n\n  img.zoom {\n    animation: zoom 0.75s ease-in;\n    animation-fill-mode: forwards;\n  }\n  img {\n    max-width: 100%;\n    height: auto;\n  }\n"
+          "\n  @keyframes zoom {\n    from {\n      transform: scale(1) translateX(0);\n    }\n    to {\n      transform: perspective(200px) scale(40) translateX(62.5px)\n        translateY(5.25px);\n    }\n  }\n\n  @media screen and (min-width: 768px) {\n    @keyframes zoom {\n      from {\n        transform: scale(1) translateX(0);\n      }\n      to {\n        transform: scale(40) translateX(120.5px) translateY(10px);\n      }\n    }\n  }\n\n  position: relative;\n  z-index: 1001;\n  margin-top: 6rem;\n  display: flex;\n  font-size: 1.4rem;\n  opacity: 0;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  width: 100%;\n  height: auto;\n  animation: fadein 1s ease-in;\n  animation-fill-mode: forwards;\n\n  button {\n    padding: 2rem;\n    border: 0.3rem solid transparent;\n    border-radius: 5px;\n    font-size: 2rem;\n  }\n  button:hover,\n  button:focus,\n  button:active {\n    border: 0.3rem solid red;\n  }\n\n  img.zoom {\n    animation: zoom 0.75s ease-in;\n    animation-fill-mode: forwards;\n  }\n  img {\n    max-width: 100%;\n    height: auto;\n  }\n"
         ]);
         return (
           (q = function() {
@@ -586,4 +586,4 @@
   },
   [[21, 2, 1]]
 ]);
-//# sourceMappingURL=main.36ec51d6.chunk.js.map
+//# sourceMappingURL=main.1431125a.chunk.js.map

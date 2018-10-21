@@ -6,7 +6,7 @@
   "display": "standalone",
   "orientation": "portrait",
   "Scope": "/build",
-  "start_url": "/build/index.html",
+  "start_url": "https://www.infinitemo.org",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
