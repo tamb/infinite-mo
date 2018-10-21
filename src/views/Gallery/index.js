@@ -10,7 +10,8 @@ const GalleryWrapper = styled.div`
       transform: scale(1) translateX(0);
     }
     to {
-      transform: scale(40) translateX(80.5px) translateY(7px);
+      transform: perspective(200px) scale(40) translateX(62.5px)
+        translateY(5.25px);
     }
   }
 
@@ -53,7 +54,7 @@ const GalleryWrapper = styled.div`
 
   img.zoom {
     animation: zoom 0.75s ease-in;
-    /* animation-fill-mode: forwards; */
+    animation-fill-mode: forwards;
   }
   img {
     max-width: 100%;
@@ -67,8 +68,8 @@ const ImgWrapper = styled.div`
     width: 450px;
   }
 
-  height: 411px;
-  width: 300px;
+  height: 320px;
+  width: 233px;
   overflow: hidden;
 `;
 
@@ -81,7 +82,7 @@ class Gallery extends Component {
     this.setState({ zooming: true });
     setTimeout(() => {
       this.setState({ zooming: false });
-    }, 1000);
+    }, 800);
   }
 
   render() {
