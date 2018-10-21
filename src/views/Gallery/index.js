@@ -52,7 +52,7 @@ const GalleryWrapper = styled.div`
   }
 
   img.zoom {
-    animation: zoom 0.33s ease-in;
+    animation: zoom 0.75s ease-in;
     /* animation-fill-mode: forwards; */
   }
   img {
