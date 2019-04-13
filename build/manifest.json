@@ -1,7 +1,7 @@
 {
   "name": "Infinite Mo",
   "short_name": "Infinite Mo",
-  "theme_color": "#ffffff",
+  "theme_color": "#000000",
   "background_color": "#000000",
   "display": "standalone",
   "orientation": "portrait",
