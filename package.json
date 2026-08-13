@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "homepage": "https://www.infinitemo.org/build",
+  "homepage": "https://tamb.github.io/infinite-mo",
   "scripts": {
     "dev": "vite",
     "start": "vite",
