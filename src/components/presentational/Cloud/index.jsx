@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import { baseUrl } from "../../../baseUrl";
 
 const propTypes = {};
 
@@ -14,7 +15,7 @@ const StyledCloud = styled.div`
     }
   }
   .cloud {
-  background: transparent url("${process.env.PUBLIC_URL}/img/clouds.png");
+  background: transparent url("${baseUrl}img/clouds.png");
   background-repeat: no-repeat;
     z-index: 3;
     position: absolute;
@@ -33,7 +34,7 @@ const StyledCloud = styled.div`
 const Cloud = () => {
   return (
     <StyledCloud>
-      <div class="cloud" />
+      <div className="cloud" />
     </StyledCloud>
   );
 };

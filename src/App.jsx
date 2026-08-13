@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
+import { baseUrl } from "./baseUrl";
 
 import { initAudio } from "./audio";
 import Universe from "./components/presentational/Universe";
@@ -50,22 +51,21 @@ const AppStyles = styled.div`
       opacity: 0;
       font-family: 'Aldrich', sans-serif;
     }
-    .fadein-logo{
+    .fadein-logo {
       animation: fadein 2s ease-in 1.5s;
-      animation-fill-mode: forwards; 
+      animation-fill-mode: forwards;
     }
-    }
-    h1{
+
+    h1 {
       font-size: 3rem;
       animation: fadein 2s ease-in;
       animation-fill-mode: forwards;
-
     }
-    h2{
+
+    h2 {
       font-size: 2rem;
       animation: fadein 2s ease-in 3s;
       animation-fill-mode: forwards;
-
     }
   }
 `;
@@ -100,7 +100,7 @@ class App extends Component {
       <AppStyles>
         <audio ref={this.setAudioRef} loop>
           <source
-            src={`${process.env.PUBLIC_URL}/echo.mp3`}
+            src={`${baseUrl}echo.mp3`}
             type="audio/mpeg"
           />
           Your browser does not support the audio tag.
@@ -113,12 +113,12 @@ class App extends Component {
           <div className="container">
             <NavBar />
             <PageContainer>
-              <Switch>
-                <Route exact path="/" component={Home} />
-                <Route path="/about" component={About} />
-                <Route path="/ask" component={Ask} />
-                <Route path="/gallery" component={Gallery} />
-              </Switch>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/ask" element={<Ask />} />
+                <Route path="/gallery" element={<Gallery />} />
+              </Routes>
             </PageContainer>
             <Counter />
           </div>

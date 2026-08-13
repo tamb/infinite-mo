@@ -13,7 +13,7 @@ const AboutWrapper = styled.div`
   z-index: 1001;
   margin-top: 1rem;
   display: flex;
-  font-size: 1.4rem;
+  font-size: 2rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;

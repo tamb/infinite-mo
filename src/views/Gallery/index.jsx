@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
+import { baseUrl } from "../../baseUrl";
 
 const propTypes = {};
 
@@ -38,27 +39,13 @@ const ImgWrapper = styled.div`
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  width: 220px;
+  max-width: 100%;
+  aspect-ratio: 1944 / 2592;
 
   @media screen and (min-width: 768px) {
-    height: 450px;
-    width: 617px;
+    width: 400px;
   }
-
-  height: 233px;
-  width: 320px;
-`;
-
-const RotatedFrame = styled.div`
-  transform: rotate(90deg);
-  transform-origin: center center;
-
-  @media screen and (min-width: 768px) {
-    width: 450px;
-    height: 617px;
-  }
-
-  width: 233px;
-  height: 320px;
 `;
 
 const ZoomTarget = styled.div`
@@ -73,8 +60,7 @@ const ZoomTarget = styled.div`
 
   img {
     width: 100%;
-    height: 100%;
-    max-width: none;
+    height: auto;
     display: block;
   }
 `;
@@ -99,14 +85,12 @@ class Gallery extends Component {
     return (
       <GalleryWrapper>
         <ImgWrapper>
-          <RotatedFrame>
-            <ZoomTarget className={this.state.zoomed ? "zoomed" : ""}>
-              <img
-                src={`${process.env.PUBLIC_URL}/img/mo-warp.png`}
-                alt="Mo with refrigerator in background"
-              />
-            </ZoomTarget>
-          </RotatedFrame>
+          <ZoomTarget className={this.state.zoomed ? "zoomed" : ""}>
+            <img
+              src={`${baseUrl}img/mo-warp.png`}
+              alt="Mo with refrigerator in background"
+            />
+          </ZoomTarget>
         </ImgWrapper>
         <button onClick={() => this.animateZoom()} type="button">
           Zoom
