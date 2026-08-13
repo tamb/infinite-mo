@@ -9,76 +9,61 @@
       "use strict";
       t.r(e);
       var a = t(0),
-        o = (t(24), t(5)),
-        i = t(6),
-        r = t(8),
+        i = (t(24), t(5)),
+        r = t(6),
+        o = t(8),
         c = t(7),
-        l = t(9),
-        s = t(2),
+        s = t(9),
+        l = t(2),
         u = t(3),
         d = t(33),
         f = t(34),
-        m = t(35);
-      function h() {
-        var n = Object(s.a)([
+        m = t(35),
+        h = null,
+        p = function(n) {
+          h = n;
+        };
+      function v() {
+        var n = Object(l.a)([
           "\n  background-color: #000000;\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n"
         ]);
         return (
-          (h = function() {
+          (v = function() {
             return n;
           }),
           n
         );
       }
-      var p = u.a.div(h()),
-        g = function(n) {
-          return a.d.createElement(p, null, n.children);
+      var g = u.a.div(v()),
+        b = function(n) {
+          return a.d.createElement(g, null, n.children);
         };
-      function b() {
-        var n = Object(s.a)([
+      function y() {
+        var n = Object(l.a)([
           '\n  @keyframes move-background {\n    from {\n      transform: scale(1) rotate(0);\n    }\n    to {\n      transform: scale(1.33) rotate(360deg);\n    }\n  }\n  @keyframes fadeinout {\n    0% {\n      opacity: 0;\n    }\n    10% {\n      opacity: 1;\n    }\n    100% {\n      opacity: 0;\n    }\n  }\n  * {\n    position: fixed;\n    top: 0;\n    left: 0;\n    height: 100%;\n    width: 100%;\n    background-position: center;\n  }\n  .moving {\n  background: transparent url("',
           '/img/stars.png");\n    background-repeat: no-repeat;\n    background-size: cover;\n    animation: move-background 400s linear infinite,\n      fadeinout 35s linear infinite;\n    transform-origin: 50% 50%;\n    opacity: 0;\n  }\n  .static-stars {\n    background: transparent url("',
           '/img/stars.png");\n    background-repeat: no-repeat;\n    background-size: cover;\n    transform: scaleX(-1);\n  }\n'
         ]);
         return (
-          (b = function() {
+          (y = function() {
             return n;
           }),
           n
         );
       }
-      var v = u.a.div(b(), "/build", "/build"),
-        y = function() {
+      var w = u.a.div(y(), "/build", "/build"),
+        k = function() {
           return a.d.createElement(
-            v,
+            w,
             null,
             a.d.createElement("div", { class: "moving" }),
             a.d.createElement("div", { class: "static-stars" })
           );
         };
-      function k() {
-        var n = Object(s.a)([
+      function x() {
+        var n = Object(l.a)([
           '\n  @keyframes scroll-right {\n    from {\n      transform: translateX(-100%);\n    }\n    to {\n      transform: translateX(200%);\n    }\n  }\n  .cloud {\n  background: transparent url("',
           '/img/clouds.png");\n  background-repeat: no-repeat;\n    z-index: 3;\n    position: absolute;\n    background-size: contain;\n    top: 20%;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    width: 100%;\n    height: 100%;\n    display: block;\n    animation: scroll-right 1000s linear infinite;\n  }\n'
-        ]);
-        return (
-          (k = function() {
-            return n;
-          }),
-          n
-        );
-      }
-      var w = u.a.div(k(), "/build"),
-        E = function() {
-          return a.d.createElement(
-            w,
-            null,
-            a.d.createElement("div", { class: "cloud" })
-          );
-        };
-      function x() {
-        var n = Object(s.a)([
-          "\n  position: fixed;\n  bottom: 1rem;\n  left: 0;\n  width: 100%;\n  height: auto;\n  text-align: center;\n  font-size: 1.4rem;\n"
         ]);
         return (
           (x = function() {
@@ -87,13 +72,32 @@
           n
         );
       }
-      var j = u.a.div(x()),
-        O = (function(n) {
+      var E = u.a.div(x(), "/build"),
+        j = function() {
+          return a.d.createElement(
+            E,
+            null,
+            a.d.createElement("div", { class: "cloud" })
+          );
+        };
+      function O() {
+        var n = Object(l.a)([
+          "\n  position: fixed;\n  bottom: 1rem;\n  left: 0;\n  width: 100%;\n  height: auto;\n  text-align: center;\n  font-size: 1.4rem;\n"
+        ]);
+        return (
+          (O = function() {
+            return n;
+          }),
+          n
+        );
+      }
+      var z = u.a.div(O()),
+        _ = (function(n) {
           function e(n) {
             var t;
             return (
-              Object(o.a)(this, e),
-              ((t = Object(r.a)(this, Object(c.a)(e).call(this, n))).state = {
+              Object(i.a)(this, e),
+              ((t = Object(o.a)(this, Object(c.a)(e).call(this, n))).state = {
                 count: parseInt(
                   localStorage.getItem("mo-counter") ||
                     t.getRandomInt(5e9, 9999999999)
@@ -104,8 +108,8 @@
             );
           }
           return (
-            Object(l.a)(e, n),
-            Object(i.a)(e, [
+            Object(s.a)(e, n),
+            Object(r.a)(e, [
               {
                 key: "getRandomInt",
                 value: function(n, e) {
@@ -127,7 +131,7 @@
                 key: "render",
                 value: function() {
                   return a.d.createElement(
-                    j,
+                    z,
                     null,
                     "Mo has answered ",
                     this.state.count,
@@ -139,9 +143,9 @@
             e
           );
         })(a.a),
-        z = t(32);
+        q = t(32);
       function M() {
-        var n = Object(s.a)([
+        var n = Object(l.a)([
           "\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: auto;\n  font-size: 1.6rem;\n  display: flex;\n  z-index: 1001;\n  padding: 1rem 0;\n\n  a {\n    flex: 1;\n    color: #ffffff;\n    text-decoration: underline;\n  }\n\n  a:hover,\n  a:active {\n    text-decoration: none;\n    color: #ffffff;\n  }\n"
         ]);
         return (
@@ -151,36 +155,27 @@
           n
         );
       }
-      var _ = u.a.nav(M()),
-        q = (function(n) {
+      var S = u.a.nav(M()),
+        I = (function(n) {
           function e() {
             return (
-              Object(o.a)(this, e),
-              Object(r.a)(this, Object(c.a)(e).apply(this, arguments))
+              Object(i.a)(this, e),
+              Object(o.a)(this, Object(c.a)(e).apply(this, arguments))
             );
           }
           return (
-            Object(l.a)(e, n),
-            Object(i.a)(e, [
+            Object(s.a)(e, n),
+            Object(r.a)(e, [
               {
                 key: "render",
                 value: function() {
                   return a.d.createElement(
-                    _,
+                    S,
                     null,
-                    a.d.createElement(z.a, { to: "/" }, "Home"),
-                    a.d.createElement(z.a, { to: "/ask" }, "AskMo"),
-                    a.d.createElement(z.a, { to: "/gallery" }, "Gallery"),
-                    a.d.createElement(z.a, { to: "/about" }, "About"),
-                    a.d.createElement(
-                      "audio",
-                      { autoPlay: !0, loop: !0 },
-                      a.d.createElement("source", {
-                        src: "".concat("/build", "/echo.mp3"),
-                        type: "audio/mpeg"
-                      }),
-                      "Your browser does not support the audio tag."
-                    )
+                    a.d.createElement(q.a, { to: "/" }, "Home"),
+                    a.d.createElement(q.a, { to: "/ask" }, "AskMo"),
+                    a.d.createElement(q.a, { to: "/gallery" }, "Gallery"),
+                    a.d.createElement(q.a, { to: "/about" }, "About")
                   );
                 }
               }
@@ -188,21 +183,21 @@
             e
           );
         })(a.a);
-      function N() {
-        var n = Object(s.a)([
+      function A() {
+        var n = Object(l.a)([
           "\n  opacity: 0;\n\n  svg {\n    height: 80px;\n    width: 300px;\n    /* margin-bottom: -8px; */\n  }\n"
         ]);
         return (
-          (N = function() {
+          (A = function() {
             return n;
           }),
           n
         );
       }
-      var I = u.a.div(N()),
-        S = function() {
+      var N = u.a.div(A()),
+        C = function() {
           return a.d.createElement(
-            I,
+            N,
             { className: "fadein-logo" },
             a.d.createElement(
               "svg",
@@ -224,17 +219,33 @@
               )
             )
           );
-        },
-        A = (function(n) {
-          function e() {
+        };
+      function Q() {
+        var n = Object(l.a)([
+          '\n  z-index: 100;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  position: fixed;\n  top: 0;\n  left: 0;\n  height: 100%;\n  width: 100%;\n\n  button {\n    padding: 2rem 4rem;\n    border: 0.3rem solid transparent;\n    border-radius: 5px;\n    font-size: 2.4rem;\n    font-family: "Aldrich", sans-serif;\n    cursor: pointer;\n    opacity: 0;\n    animation: fadein 2s ease-in;\n    animation-fill-mode: forwards;\n  }\n\n  button:hover,\n  button:focus,\n  button:active {\n    border: 0.3rem solid red;\n  }\n'
+        ]);
+        return (
+          (Q = function() {
+            return n;
+          }),
+          n
+        );
+      }
+      var W = u.a.div(Q()),
+        D = (function(n) {
+          function e(n) {
+            var t;
             return (
-              Object(o.a)(this, e),
-              Object(r.a)(this, Object(c.a)(e).apply(this, arguments))
+              Object(i.a)(this, e),
+              ((t = Object(o.a)(this, Object(c.a)(e).call(this, n))).state = {
+                entered: "true" === sessionStorage.getItem("mo-entered")
+              }),
+              t
             );
           }
           return (
-            Object(l.a)(e, n),
-            Object(i.a)(e, [
+            Object(s.a)(e, n),
+            Object(r.a)(e, [
               {
                 key: "componentDidMount",
                 value: function() {
@@ -242,33 +253,62 @@
                 }
               },
               {
+                key: "handleEnter",
+                value: function() {
+                  sessionStorage.setItem("mo-entered", "true"),
+                    (function() {
+                      if (h) {
+                        var n = h.play();
+                        void 0 !== n && n.catch(function() {});
+                      }
+                    })(),
+                    this.setState({ entered: !0 });
+                }
+              },
+              {
                 key: "render",
                 value: function() {
-                  return a.d.createElement(
-                    "header",
-                    null,
-                    a.d.createElement(S, null),
-                    a.d.createElement("h1", null, "Infinite Mo"),
-                    a.d.createElement("h2", null, "there's only one")
-                  );
+                  var n = this;
+                  return this.state.entered
+                    ? a.d.createElement(
+                        "header",
+                        null,
+                        a.d.createElement(C, null),
+                        a.d.createElement("h1", null, "Infinite Mo"),
+                        a.d.createElement("h2", null, "there's only one")
+                      )
+                    : a.d.createElement(
+                        W,
+                        null,
+                        a.d.createElement(
+                          "button",
+                          {
+                            type: "button",
+                            onClick: function() {
+                              return n.handleEnter();
+                            }
+                          },
+                          "Enter"
+                        )
+                      );
                 }
               }
             ]),
             e
           );
         })(a.a);
-      function W() {
-        var n = Object(s.a)([
-          "\n  position: fixed;\n  z-index: 1001;\n  margin-top: 1rem;\n  display: flex;\n  flex-direction: column;\n  font-size: 1.4rem;\n  top: 1rem;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  justify-content: center;\n  align-items: center;\n\n  .ask {\n    opacity: 0;\n  }\n  .ask__title {\n    animation: fadein 2s ease-in;\n    animation-fill-mode: forwards;\n  }\n  .ask__tagline {\n    animation: fadein 2s ease-in 1.5s;\n    animation-fill-mode: forwards;\n  }\n  .ask__form {\n    animation: fadein 2s ease-in 1s;\n    animation-fill-mode: forwards;\n  }\n"
+      function R() {
+        var n = Object(l.a)([
+          '\n  position: fixed;\n  z-index: 1001;\n  margin-top: 1rem;\n  display: flex;\n  flex-direction: column;\n  font-size: 1.4rem;\n  top: 1rem;\n  left: 0;\n  height: 100%;\n  width: 100%;\n  justify-content: center;\n  align-items: center;\n\n  .ask {\n    opacity: 0;\n  }\n  .ask__title {\n    animation: fadein 2s ease-in;\n    animation-fill-mode: forwards;\n  }\n  .ask__tagline {\n    animation: fadein 2s ease-in 1.5s;\n    animation-fill-mode: forwards;\n  }\n  .ask__form {\n    animation: fadein 2s ease-in 1s;\n    animation-fill-mode: forwards;\n  }\n\n  .ask__question {\n    animation: fadein 1s ease-in;\n    animation-fill-mode: forwards;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    gap: 1rem;\n    max-width: 90%;\n  }\n\n  .ask__choices {\n    display: flex;\n    flex-direction: column;\n    gap: 0.5rem;\n  }\n\n  button {\n    padding: 1rem 2rem;\n    border: 0.3rem solid transparent;\n    border-radius: 5px;\n    font-size: 1.4rem;\n    cursor: pointer;\n  }\n\n  button:hover,\n  button:focus,\n  button:active {\n    border: 0.3rem solid red;\n  }\n\n  textarea,\n  input[type="text"] {\n    width: 100%;\n    min-width: 250px;\n    min-height: 80px;\n    font-size: 1.4rem;\n    padding: 0.5rem;\n  }\n\n  input[type="text"] {\n    min-height: auto;\n  }\n'
         ]);
         return (
-          (W = function() {
+          (R = function() {
             return n;
           }),
           n
         );
       }
-      var C = [
+      var L = [
           {
             question: "Why are you asking this question again?",
             choices: null
@@ -291,22 +331,25 @@
             choices: null
           }
         ],
-        X = u.a.div(W()),
-        D = (function(n) {
+        B = u.a.div(R()),
+        H = (function(n) {
           function e(n) {
             var t;
             return (
-              Object(o.a)(this, e),
-              ((t = Object(r.a)(this, Object(c.a)(e).call(this, n))).state = {
+              Object(i.a)(this, e),
+              ((t = Object(o.a)(this, Object(c.a)(e).call(this, n))).state = {
+                phase: "query",
+                query: "",
                 index: 0,
-                questions: C
+                answer: "",
+                questions: L
               }),
               t
             );
           }
           return (
-            Object(l.a)(e, n),
-            Object(i.a)(e, [
+            Object(s.a)(e, n),
+            Object(r.a)(e, [
               {
                 key: "componentDidMount",
                 value: function() {
@@ -319,51 +362,139 @@
                             (n[a] = n[t]),
                             (n[t] = e);
                         return n;
-                      })(this.state.questions)
+                      })(L.concat())
                     });
                 }
               },
               {
-                key: "generateQuestion",
+                key: "handleQuerySubmit",
                 value: function(n) {
-                  var e = this;
-                  n.preventDefault();
-                  var t = this.state.questions[this.state.index];
+                  n.preventDefault(),
+                    this.state.query.trim() &&
+                      this.setState({ phase: "wizard", index: 0, answer: "" });
+                }
+              },
+              {
+                key: "advanceQuestion",
+                value: function() {
+                  var n = this.state.index + 1;
+                  n >= this.state.questions.length
+                    ? this.setState({ phase: "done", index: n, answer: "" })
+                    : this.setState({ index: n, answer: "" });
+                }
+              },
+              {
+                key: "handleChoice",
+                value: function(n) {
+                  this.advanceQuestion();
+                }
+              },
+              {
+                key: "handleTextAnswer",
+                value: function(n) {
+                  n.preventDefault(),
+                    this.state.answer.trim() && this.advanceQuestion();
+                }
+              },
+              {
+                key: "renderQueryForm",
+                value: function() {
+                  var n = this;
                   return a.d.createElement(
-                    "div",
-                    null,
+                    "form",
+                    {
+                      className: "ask ask__form",
+                      onSubmit: function(e) {
+                        return n.handleQuerySubmit(e);
+                      }
+                    },
                     a.d.createElement(
                       "label",
                       null,
-                      t.question,
-                      t.choices
-                        ? t.choices.map(function(n) {
+                      "Your query:",
+                      a.d.createElement("textarea", {
+                        value: this.state.query,
+                        onChange: function(e) {
+                          return n.setState({ query: e.target.value });
+                        }
+                      })
+                    ),
+                    a.d.createElement("button", { type: "submit" }, "Submit")
+                  );
+                }
+              },
+              {
+                key: "renderWizardQuestion",
+                value: function() {
+                  var n = this,
+                    e = this.state.questions[this.state.index];
+                  return a.d.createElement(
+                    "div",
+                    { className: "ask ask__question" },
+                    a.d.createElement("p", null, e.question),
+                    e.choices
+                      ? a.d.createElement(
+                          "div",
+                          { className: "ask__choices" },
+                          e.choices.map(function(e) {
                             return a.d.createElement(
                               "button",
                               {
+                                key: e,
                                 onClick: function() {
-                                  return e.generateQuestion();
+                                  return n.handleChoice(e);
                                 },
-                                type: "button",
-                                className: ""
+                                type: "button"
                               },
-                              n
+                              e
                             );
                           })
-                        : a.d.createElement("input", {
+                        )
+                      : a.d.createElement(
+                          "form",
+                          {
+                            onSubmit: function(e) {
+                              return n.handleTextAnswer(e);
+                            }
+                          },
+                          a.d.createElement("input", {
                             type: "text",
-                            className: ""
-                          })
-                    )
+                            value: this.state.answer,
+                            onChange: function(e) {
+                              return n.setState({ answer: e.target.value });
+                            }
+                          }),
+                          a.d.createElement(
+                            "button",
+                            { type: "submit" },
+                            "Next"
+                          )
+                        )
+                  );
+                }
+              },
+              {
+                key: "renderDone",
+                value: function() {
+                  return a.d.createElement(
+                    "div",
+                    { className: "ask ask__question" },
+                    a.d.createElement(
+                      "p",
+                      null,
+                      "Mo has received your question: \u201c",
+                      this.state.query,
+                      "\u201d"
+                    ),
+                    a.d.createElement("p", null, "He shall answer in kind.")
                   );
                 }
               },
               {
                 key: "render",
                 value: function() {
-                  var n = this;
                   return a.d.createElement(
-                    X,
+                    B,
                     null,
                     a.d.createElement(
                       "h2",
@@ -375,22 +506,10 @@
                       { className: "ask ask__tagline" },
                       "He shall answer in kind"
                     ),
-                    a.d.createElement(
-                      "form",
-                      {
-                        className: "ask ask__form",
-                        onSubmit: function(e) {
-                          return n.generateQuestion(e);
-                        }
-                      },
-                      a.d.createElement(
-                        "label",
-                        null,
-                        "Your query:",
-                        a.d.createElement("textarea", null)
-                      ),
-                      a.d.createElement("button", { type: "submit" }, "Submit")
-                    )
+                    "query" === this.state.phase && this.renderQueryForm(),
+                    "wizard" === this.state.phase &&
+                      this.renderWizardQuestion(),
+                    "done" === this.state.phase && this.renderDone()
                   );
                 }
               }
@@ -398,28 +517,28 @@
             e
           );
         })(a.a);
-      function L() {
-        var n = Object(s.a)([
+      function J() {
+        var n = Object(l.a)([
           "\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  z-index: 1001;\n  margin-top: 1rem;\n  display: flex;\n  font-size: 1.4rem;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n\n  .article__title {\n    animation: fadein 2s ease-in;\n    animation-fill-mode: forwards;\n    opacity: 0;\n  }\n\n  .article__body {\n    animation: fadein 2s ease-in 1s;\n    animation-fill-mode: forwards;\n    opacity: 0;\n  }\n"
         ]);
         return (
-          (L = function() {
+          (J = function() {
             return n;
           }),
           n
         );
       }
-      var Q = u.a.div(L()),
-        Y = (function(n) {
+      var T = u.a.div(J()),
+        F = (function(n) {
           function e() {
             return (
-              Object(o.a)(this, e),
-              Object(r.a)(this, Object(c.a)(e).apply(this, arguments))
+              Object(i.a)(this, e),
+              Object(o.a)(this, Object(c.a)(e).apply(this, arguments))
             );
           }
           return (
-            Object(l.a)(e, n),
-            Object(i.a)(e, [
+            Object(s.a)(e, n),
+            Object(r.a)(e, [
               {
                 key: "componentDidMount",
                 value: function() {
@@ -430,7 +549,7 @@
                 key: "render",
                 value: function() {
                   return a.d.createElement(
-                    Q,
+                    T,
                     null,
                     a.d.createElement(
                       "article",
@@ -458,40 +577,68 @@
             e
           );
         })(a.a);
-      function B() {
-        var n = Object(s.a)([
-          "\n  @media screen and (min-width: 768px) {\n    height: 617px;\n    width: 450px;\n  }\n\n  height: 320px;\n  width: 233px;\n  overflow: hidden;\n"
+      function U() {
+        var n = Object(l.a)([
+          "\n  width: 100%;\n  height: 100%;\n  transform-origin: 8% 32%;\n  transition: transform 0.75s ease-in;\n\n  &.zoomed {\n    transform: scale(18);\n  }\n\n  img {\n    width: 100%;\n    height: 100%;\n    max-width: none;\n    display: block;\n  }\n"
         ]);
         return (
-          (B = function() {
+          (U = function() {
             return n;
           }),
           n
         );
       }
-      function J() {
-        var n = Object(s.a)([
-          "\n  @keyframes zoom {\n    from {\n      transform: scale(1) translateX(0);\n    }\n    to {\n      transform: perspective(200px) scale(40) translateX(62.5px)\n        translateY(5.25px);\n    }\n  }\n\n  @media screen and (min-width: 768px) {\n    @keyframes zoom {\n      from {\n        transform: scale(1) translateX(0);\n      }\n      to {\n        transform: scale(40) translateX(120.5px) translateY(10px);\n      }\n    }\n  }\n\n  position: relative;\n  z-index: 1001;\n  margin-top: 6rem;\n  display: flex;\n  font-size: 1.4rem;\n  opacity: 0;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  width: 100%;\n  height: auto;\n  animation: fadein 1s ease-in;\n  animation-fill-mode: forwards;\n\n  button {\n    padding: 2rem;\n    border: 0.3rem solid transparent;\n    border-radius: 5px;\n    font-size: 2rem;\n  }\n  button:hover,\n  button:focus,\n  button:active {\n    border: 0.3rem solid red;\n  }\n\n  img.zoom {\n    animation: zoom 0.75s ease-in;\n    animation-fill-mode: forwards;\n  }\n  img {\n    max-width: 100%;\n    height: auto;\n  }\n"
+      function X() {
+        var n = Object(l.a)([
+          "\n  transform: rotate(90deg);\n  transform-origin: center center;\n\n  @media screen and (min-width: 768px) {\n    width: 450px;\n    height: 617px;\n  }\n\n  width: 233px;\n  height: 320px;\n"
         ]);
         return (
-          (J = function() {
+          (X = function() {
             return n;
           }),
           n
         );
       }
-      var H = u.a.div(J()),
-        R = u.a.div(B()),
-        T = (function(n) {
-          function e() {
+      function Y() {
+        var n = Object(l.a)([
+          "\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  overflow: hidden;\n\n  @media screen and (min-width: 768px) {\n    height: 450px;\n    width: 617px;\n  }\n\n  height: 233px;\n  width: 320px;\n"
+        ]);
+        return (
+          (Y = function() {
+            return n;
+          }),
+          n
+        );
+      }
+      function Z() {
+        var n = Object(l.a)([
+          "\n  position: relative;\n  z-index: 1001;\n  margin-top: 6rem;\n  display: flex;\n  font-size: 1.4rem;\n  opacity: 0;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  width: 100%;\n  height: auto;\n  animation: fadein 1s ease-in;\n  animation-fill-mode: forwards;\n\n  button {\n    padding: 2rem;\n    border: 0.3rem solid transparent;\n    border-radius: 5px;\n    font-size: 2rem;\n    cursor: pointer;\n  }\n  button:hover,\n  button:focus,\n  button:active {\n    border: 0.3rem solid red;\n  }\n"
+        ]);
+        return (
+          (Z = function() {
+            return n;
+          }),
+          n
+        );
+      }
+      var G = u.a.div(Z()),
+        $ = u.a.div(Y()),
+        K = u.a.div(X()),
+        P = u.a.div(U()),
+        V = (function(n) {
+          function e(n) {
+            var t;
             return (
-              Object(o.a)(this, e),
-              Object(r.a)(this, Object(c.a)(e).apply(this, arguments))
+              Object(i.a)(this, e),
+              ((t = Object(o.a)(this, Object(c.a)(e).call(this, n))).state = {
+                zoomed: !1
+              }),
+              t
             );
           }
           return (
-            Object(l.a)(e, n),
-            Object(i.a)(e, [
+            Object(s.a)(e, n),
+            Object(r.a)(e, [
               {
                 key: "componentDidMount",
                 value: function() {
@@ -501,11 +648,7 @@
               {
                 key: "animateZoom",
                 value: function() {
-                  var n = this;
-                  this.setState({ zooming: !0 }),
-                    setTimeout(function() {
-                      n.setState({ zooming: !1 });
-                    }, 800);
+                  this.setState({ zoomed: !0 });
                 }
               },
               {
@@ -513,15 +656,23 @@
                 value: function() {
                   var n = this;
                   return a.d.createElement(
-                    H,
+                    G,
                     null,
                     a.d.createElement(
-                      R,
+                      $,
                       null,
-                      a.d.createElement("img", {
-                        className: this.state.zooming ? "zoom" : "",
-                        src: "".concat("/build", "/img/mo-warp.png")
-                      })
+                      a.d.createElement(
+                        K,
+                        null,
+                        a.d.createElement(
+                          P,
+                          { className: this.state.zoomed ? "zoomed" : "" },
+                          a.d.createElement("img", {
+                            src: "".concat("/build", "/img/mo-warp.png"),
+                            alt: "Mo with refrigerator in background"
+                          })
+                        )
+                      )
                     ),
                     a.d.createElement(
                       "button",
@@ -531,7 +682,7 @@
                         },
                         type: "button"
                       },
-                      "Next"
+                      "Zoom"
                     )
                   );
                 }
@@ -540,51 +691,78 @@
             e
           );
         })(a.a);
-      function U() {
-        var n = Object(s.a)([
+      function nn() {
+        var n = Object(l.a)([
           "\n  position: fixed;\n  width: 100%;\n  height: 100%;\n  top: 2rem;\n  left: 0;\n"
         ]);
         return (
-          (U = function() {
+          (nn = function() {
             return n;
           }),
           n
         );
       }
-      function G() {
-        var n = Object(s.a)([
+      function en() {
+        var n = Object(l.a)([
           "\n    @keyframes fadein{\n    from {\n      opacity: 0;\n    }\n    to{\n      opacity: 1;\n    }\n  }\n  \n  color: #ffffff;\n  text-align: center;\n\n\n  .container{\n    display: flex;\n    position: relative;\n  }\n\n  header{\n    z-index: 100;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: center;\n    position: fixed;\n    top: 0;\n    left: 0;\n    height: 100%;\n    width: 100%;\n    h1,h2{\n      color: #ffffff;\n      position: relative;\n      margin: 0;\n      opacity: 0;\n      font-family: 'Aldrich', sans-serif;\n    }\n    .fadein-logo{\n      animation: fadein 2s ease-in 1.5s;\n      animation-fill-mode: forwards; \n    }\n    }\n    h1{\n      font-size: 3rem;\n      animation: fadein 2s ease-in;\n      animation-fill-mode: forwards;\n\n    }\n    h2{\n      font-size: 2rem;\n      animation: fadein 2s ease-in 3s;\n      animation-fill-mode: forwards;\n\n    }\n  }\n"
         ]);
         return (
-          (G = function() {
+          (en = function() {
             return n;
           }),
           n
         );
       }
-      var Z = u.a.div(G()),
-        F = u.a.main(U()),
-        P = (function(n) {
+      var tn = u.a.div(en()),
+        an = u.a.main(nn()),
+        rn = (function(n) {
           function e() {
+            var n, t;
+            Object(i.a)(this, e);
+            for (var a = arguments.length, r = new Array(a), s = 0; s < a; s++)
+              r[s] = arguments[s];
             return (
-              Object(o.a)(this, e),
-              Object(r.a)(this, Object(c.a)(e).apply(this, arguments))
+              ((t = Object(o.a)(
+                this,
+                (n = Object(c.a)(e)).call.apply(n, [this].concat(r))
+              )).setAudioRef = function(n) {
+                (t.audioRef = n), n && p(n);
+              }),
+              t
             );
           }
           return (
-            Object(l.a)(e, n),
-            Object(i.a)(e, [
+            Object(s.a)(e, n),
+            Object(r.a)(e, [
+              {
+                key: "componentDidMount",
+                value: function() {
+                  this.audioRef &&
+                    (p(this.audioRef),
+                    "true" === sessionStorage.getItem("mo-entered") &&
+                      this.audioRef.play().catch(function() {}));
+                }
+              },
               {
                 key: "render",
                 value: function() {
                   return a.d.createElement(
-                    Z,
+                    tn,
                     null,
                     a.d.createElement(
-                      g,
+                      "audio",
+                      { ref: this.setAudioRef, loop: !0 },
+                      a.d.createElement("source", {
+                        src: "".concat("/build", "/echo.mp3"),
+                        type: "audio/mpeg"
+                      }),
+                      "Your browser does not support the audio tag."
+                    ),
+                    a.d.createElement(
+                      b,
                       null,
-                      a.d.createElement(y, null),
-                      a.d.createElement(E, null)
+                      a.d.createElement(k, null),
+                      a.d.createElement(j, null)
                     ),
                     a.d.createElement(
                       d.a,
@@ -592,9 +770,9 @@
                       a.d.createElement(
                         "div",
                         { className: "container" },
-                        a.d.createElement(q, null),
+                        a.d.createElement(I, null),
                         a.d.createElement(
-                          F,
+                          an,
                           null,
                           a.d.createElement(
                             f.a,
@@ -602,23 +780,23 @@
                             a.d.createElement(m.a, {
                               exact: !0,
                               path: "/",
-                              component: A
-                            }),
-                            a.d.createElement(m.a, {
-                              path: "/about",
-                              component: Y
-                            }),
-                            a.d.createElement(m.a, {
-                              path: "/ask",
                               component: D
                             }),
                             a.d.createElement(m.a, {
+                              path: "/about",
+                              component: F
+                            }),
+                            a.d.createElement(m.a, {
+                              path: "/ask",
+                              component: H
+                            }),
+                            a.d.createElement(m.a, {
                               path: "/gallery",
-                              component: T
+                              component: V
                             })
                           )
                         ),
-                        a.d.createElement(O, null)
+                        a.d.createElement(_, null)
                       )
                     )
                   );
@@ -628,14 +806,14 @@
             e
           );
         })(a.a),
-        $ = Boolean(
+        on = Boolean(
           "localhost" === window.location.hostname ||
             "[::1]" === window.location.hostname ||
             window.location.hostname.match(
               /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
             )
         );
-      function K(n, e) {
+      function cn(n, e) {
         navigator.serviceWorker
           .register(n)
           .then(function(n) {
@@ -655,7 +833,7 @@
             console.error("Error during service worker registration:", n);
           });
       }
-      a.d.render(a.d.createElement(P, null), document.getElementById("root")),
+      a.d.render(a.d.createElement(rn, null), document.getElementById("root")),
         (function(n) {
           if ("serviceWorker" in navigator) {
             if (
@@ -665,7 +843,7 @@
               return;
             window.addEventListener("load", function() {
               var e = "".concat("/build", "/service-worker.js");
-              $
+              on
                 ? ((function(n, e) {
                     fetch(n)
                       .then(function(t) {
@@ -677,7 +855,7 @@
                                 window.location.reload();
                               });
                             })
-                          : K(n, e);
+                          : cn(n, e);
                       })
                       .catch(function() {
                         console.log(
@@ -690,7 +868,7 @@
                       "This web app is being served cache-first by a service worker. To learn more, visit https://goo.gl/SC7cgQ"
                     );
                   }))
-                : K(e, n);
+                : cn(e, n);
             });
           }
         })();
@@ -698,4 +876,4 @@
   },
   [[21, 2, 1]]
 ]);
-//# sourceMappingURL=main.a4bbc63a.chunk.js.map
+//# sourceMappingURL=main.71b64e41.chunk.js.map

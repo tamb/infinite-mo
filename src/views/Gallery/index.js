@@ -5,27 +5,6 @@ import styled from "styled-components";
 const propTypes = {};
 
 const GalleryWrapper = styled.div`
-  @keyframes zoom {
-    from {
-      transform: scale(1) translateX(0);
-    }
-    to {
-      transform: perspective(200px) scale(40) translateX(62.5px)
-        translateY(5.25px);
-    }
-  }
-
-  @media screen and (min-width: 768px) {
-    @keyframes zoom {
-      from {
-        transform: scale(1) translateX(0);
-      }
-      to {
-        transform: scale(40) translateX(120.5px) translateY(10px);
-      }
-    }
-  }
-
   position: relative;
   z-index: 1001;
   margin-top: 6rem;
@@ -45,57 +24,92 @@ const GalleryWrapper = styled.div`
     border: 0.3rem solid transparent;
     border-radius: 5px;
     font-size: 2rem;
+    cursor: pointer;
   }
   button:hover,
   button:focus,
   button:active {
     border: 0.3rem solid red;
   }
-
-  img.zoom {
-    animation: zoom 0.75s ease-in;
-    animation-fill-mode: forwards;
-  }
-  img {
-    max-width: 100%;
-    height: auto;
-  }
 `;
 
 const ImgWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
   @media screen and (min-width: 768px) {
-    height: 617px;
-    width: 450px;
+    height: 450px;
+    width: 617px;
   }
 
-  height: 320px;
+  height: 233px;
+  width: 320px;
+`;
+
+const RotatedFrame = styled.div`
+  transform: rotate(90deg);
+  transform-origin: center center;
+
+  @media screen and (min-width: 768px) {
+    width: 450px;
+    height: 617px;
+  }
+
   width: 233px;
-  overflow: hidden;
+  height: 320px;
+`;
+
+const ZoomTarget = styled.div`
+  width: 100%;
+  height: 100%;
+  transform-origin: 8% 32%;
+  transition: transform 0.75s ease-in;
+
+  &.zoomed {
+    transform: scale(18);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    display: block;
+  }
 `;
 
 class Gallery extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      zoomed: false
+    };
+  }
+
   componentDidMount() {
     document.title = "Gallery - Infinite Mo";
   }
 
   animateZoom() {
-    this.setState({ zooming: true });
-    setTimeout(() => {
-      this.setState({ zooming: false });
-    }, 800);
+    this.setState({ zoomed: true });
   }
 
   render() {
     return (
       <GalleryWrapper>
         <ImgWrapper>
-          <img
-            className={this.state.zooming ? "zoom" : ""}
-            src={`${process.env.PUBLIC_URL}/img/mo-warp.png`}
-          />
+          <RotatedFrame>
+            <ZoomTarget className={this.state.zoomed ? "zoomed" : ""}>
+              <img
+                src={`${process.env.PUBLIC_URL}/img/mo-warp.png`}
+                alt="Mo with refrigerator in background"
+              />
+            </ZoomTarget>
+          </RotatedFrame>
         </ImgWrapper>
         <button onClick={() => this.animateZoom()} type="button">
-          Next
+          Zoom
         </button>
       </GalleryWrapper>
     );

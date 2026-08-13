@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 
+import { initAudio } from "./audio";
 import Universe from "./components/presentational/Universe";
 import Stars from "./components/presentational/Stars";
 import Cloud from "./components/presentational/Cloud";
@@ -78,9 +79,32 @@ const PageContainer = styled.main`
 `;
 
 class App extends Component {
+  componentDidMount() {
+    if (this.audioRef) {
+      initAudio(this.audioRef);
+      if (sessionStorage.getItem("mo-entered") === "true") {
+        this.audioRef.play().catch(() => {});
+      }
+    }
+  }
+
+  setAudioRef = el => {
+    this.audioRef = el;
+    if (el) {
+      initAudio(el);
+    }
+  };
+
   render() {
     return (
       <AppStyles>
+        <audio ref={this.setAudioRef} loop>
+          <source
+            src={`${process.env.PUBLIC_URL}/echo.mp3`}
+            type="audio/mpeg"
+          />
+          Your browser does not support the audio tag.
+        </audio>
         <Universe>
           <Stars />
           <Cloud />
