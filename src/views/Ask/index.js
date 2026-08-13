@@ -62,43 +62,153 @@ const AskWrapper = styled.div`
     animation: fadein 2s ease-in 1s;
     animation-fill-mode: forwards;
   }
+
+  .ask__question {
+    animation: fadein 1s ease-in;
+    animation-fill-mode: forwards;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 90%;
+  }
+
+  .ask__choices {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  button {
+    padding: 1rem 2rem;
+    border: 0.3rem solid transparent;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
+
+  button:hover,
+  button:focus,
+  button:active {
+    border: 0.3rem solid red;
+  }
+
+  textarea,
+  input[type="text"] {
+    width: 100%;
+    min-width: 250px;
+    min-height: 80px;
+    font-size: 1.4rem;
+    padding: 0.5rem;
+  }
+
+  input[type="text"] {
+    min-height: auto;
+  }
 `;
 
 class Ask extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      phase: "query",
+      query: "",
       index: 0,
+      answer: "",
       questions: QUESTIONS_ARR
     };
   }
 
   componentDidMount() {
     document.title = "Ask - Infinite Mo";
-    this.setState({ questions: shuffle(this.state.questions) });
+    this.setState({ questions: shuffle([...QUESTIONS_ARR]) });
   }
 
-  generateQuestion(e) {
+  handleQuerySubmit(e) {
     e.preventDefault();
-    const q = this.state.questions[this.state.index];
+    if (!this.state.query.trim()) {
+      return;
+    }
+    this.setState({ phase: "wizard", index: 0, answer: "" });
+  }
+
+  advanceQuestion() {
+    const nextIndex = this.state.index + 1;
+    if (nextIndex >= this.state.questions.length) {
+      this.setState({ phase: "done", index: nextIndex, answer: "" });
+    } else {
+      this.setState({ index: nextIndex, answer: "" });
+    }
+  }
+
+  handleChoice(choice) {
+    this.advanceQuestion();
+  }
+
+  handleTextAnswer(e) {
+    e.preventDefault();
+    if (!this.state.answer.trim()) {
+      return;
+    }
+    this.advanceQuestion();
+  }
+
+  renderQueryForm() {
     return (
-      <div>
+      <form className="ask ask__form" onSubmit={e => this.handleQuerySubmit(e)}>
         <label>
-          {q.question}
-          {q.choices ? (
-            q.choices.map(c => (
+          Your query:
+          <textarea
+            value={this.state.query}
+            onChange={e => this.setState({ query: e.target.value })}
+          />
+        </label>
+        <button type="submit">Submit</button>
+      </form>
+    );
+  }
+
+  renderWizardQuestion() {
+    const q = this.state.questions[this.state.index];
+
+    return (
+      <div className="ask ask__question">
+        <p>{q.question}</p>
+        {q.choices ? (
+          <div className="ask__choices">
+            {q.choices.map(c => (
               <button
-                onClick={() => this.generateQuestion()}
+                key={c}
+                onClick={() => this.handleChoice(c)}
                 type="button"
-                className=""
               >
                 {c}
               </button>
-            ))
-          ) : (
-            <input type="text" className="" />
-          )}
-        </label>
+            ))}
+          </div>
+        ) : (
+          <form onSubmit={e => this.handleTextAnswer(e)}>
+            <input
+              type="text"
+              value={this.state.answer}
+              onChange={e => this.setState({ answer: e.target.value })}
+            />
+            <button type="submit">Next</button>
+          </form>
+        )}
+      </div>
+    );
+  }
+
+  renderDone() {
+    return (
+      <div className="ask ask__question">
+        <p>
+          Mo has received your question: &ldquo;
+          {this.state.query}
+          &rdquo;
+        </p>
+        <p>He shall answer in kind.</p>
       </div>
     );
   }
@@ -108,16 +218,9 @@ class Ask extends Component {
       <AskWrapper>
         <h2 className="ask ask__title">Ask Mo a Question</h2>
         <p className="ask ask__tagline">He shall answer in kind</p>
-        <form
-          className="ask ask__form"
-          onSubmit={e => this.generateQuestion(e)}
-        >
-          <label>
-            Your query:
-            <textarea />
-          </label>
-          <button type="submit">Submit</button>
-        </form>
+        {this.state.phase === "query" && this.renderQueryForm()}
+        {this.state.phase === "wizard" && this.renderWizardQuestion()}
+        {this.state.phase === "done" && this.renderDone()}
       </AskWrapper>
     );
   }
